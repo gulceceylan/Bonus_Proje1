@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\bin\Debug\Bonus_Proje1.exe.config
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\bin\Debug\Bonus_Proje1.exe
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\bin\Debug\Bonus_Proje1.pdb
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.Form1.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.exe
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.pdb
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmOgrenciNotlar.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmOgretmen.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmKulup.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmDersler.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.Frm_Ogrenci.resources
