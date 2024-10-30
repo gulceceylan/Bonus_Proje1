@@ -37,5 +37,11 @@ namespace Bonus_Proje1
             Frm_Ogrenci fr = new Frm_Ogrenci();
             fr.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSinavNotlar fr = new FrmSinavNotlar();
+            fr.Show();
+        }
     }
 }

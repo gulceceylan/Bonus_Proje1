@@ -36,7 +36,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnsinavnotlar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnogrenciislemleri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -124,18 +124,19 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnsinavnotlar
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(180, 288);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(231, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sınav Notları";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnsinavnotlar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnsinavnotlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnsinavnotlar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsinavnotlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsinavnotlar.Location = new System.Drawing.Point(180, 288);
+            this.btnsinavnotlar.Name = "btnsinavnotlar";
+            this.btnsinavnotlar.Size = new System.Drawing.Size(231, 50);
+            this.btnsinavnotlar.TabIndex = 2;
+            this.btnsinavnotlar.Text = "Sınav Notları";
+            this.btnsinavnotlar.UseVisualStyleBackColor = false;
+            this.btnsinavnotlar.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -172,7 +173,7 @@
             this.ClientSize = new System.Drawing.Size(482, 618);
             this.Controls.Add(this.btnogrenciislemleri);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnsinavnotlar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -203,7 +204,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnsinavnotlar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnogrenciislemleri;
     }

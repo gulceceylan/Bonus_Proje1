@@ -33,26 +33,20 @@ namespace Bonus_Proje1
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cmbkulupid.DisplayMember = "Kulupad";
-            cmbkulupid.ValueMember = "Kulupid";
-            cmbkulupid.DataSource = dt;
+            cmbkulup.DisplayMember = "Kulupad";
+            cmbkulup.ValueMember = "Kulupid";
+            cmbkulup.DataSource = dt;
             baglanti.Close();
 
         }
         string c="";
+
         private void btnekle_Click(object sender, EventArgs e)
         {
             
             
-            if (rbuttonkız.Checked == true)
-            {
-                c = "Kız";
-            }
-            if (rbuttonerkek.Checked == true)
-            {
-                c = "Erkek";
-            }
-            ds.Ogrenci_Ekle(txtograd.Text, txtogrsoyad.Text,byte.Parse(cmbkulupid.SelectedValue.ToString()), c);
+            
+            ds.Ogrenci_Ekle(txtograd.Text, txtogrsoyad.Text,byte.Parse(cmbkulup.SelectedValue.ToString()), c);
             MessageBox.Show("Öğrenci Ekleme İşlemi Yapıldı");
         }
 
@@ -64,7 +58,7 @@ namespace Bonus_Proje1
 
         private void cmbkulupid_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtogrid.Text = cmbkulupid.SelectedValue.ToString();
+            txtogrid.Text = cmbkulup.SelectedValue.ToString();
         }
 
         private void btnsil_Click(object sender, EventArgs e)
@@ -77,9 +71,36 @@ namespace Bonus_Proje1
             txtogrid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtograd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtogrsoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            cmbkulupid.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbkulup.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string cinsiyet = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            
+            rbuttonerkek.Checked = cinsiyet == "Erkek";
+            rbuttonkız.Checked = cinsiyet == "Kiz";
             
 
+        }
+
+        private void btnguncelle_Click(object sender, EventArgs e)
+        {
+            ds.Ogrenci_Güncelle(txtograd.Text, txtogrsoyad.Text,byte.Parse(cmbkulup.SelectedValue.ToString()),c,int.Parse( txtogrid.Text));
+        }
+
+        private void rbuttonkız_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbuttonkız.Checked == true)
+            {
+                c = "Kız";
+            }
+           
+        }
+
+        private void rbuttonerkek_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (rbuttonerkek.Checked == true)
+            {
+                c = "Erkek";
+            }
         }
     }
 }

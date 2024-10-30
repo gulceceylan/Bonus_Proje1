@@ -13,3 +13,4 @@ C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.Fr
 C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmKulup.resources
 C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmDersler.resources
 C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.Frm_Ogrenci.resources
+C:\Users\Lenovo\source\repos\Bonus_Proje1\Bonus_Proje1\obj\Debug\Bonus_Proje1.FrmSinavNotlar.resources

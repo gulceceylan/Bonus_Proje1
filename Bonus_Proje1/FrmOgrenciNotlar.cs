@@ -22,7 +22,7 @@ namespace Bonus_Proje1
         SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-KUCNJLV5\SQLEXPRESS;Initial Catalog=Okul;Integrated Security=True");
         private void FrmOgrenciNotlar_Load(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Select Dersad,Sinav1,Sinav2,Sinav3,Proje, Ortalama,Durum From Tbl_Notlar Inner JOIN Tbl_Dersler on Tbl_Notlar.Dersid=Tbl_Dersler.Dersid Where Ogrid=1", baglanti);
+            SqlCommand komut = new SqlCommand("Select Dersad,Sinav1,Sinav2,Sinav3,Proje, Ortalama,Durum From Tbl_Notlar Inner JOIN Tbl_Dersler on Tbl_Notlar.Dersid=Tbl_Dersler.Dersid Where Ogrid=@p1", baglanti);
             komut.Parameters.AddWithValue("@p1", numara);
             // this.Text = numara.ToString();
             SqlDataAdapter da = new SqlDataAdapter(komut);

@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,6 +84,12 @@
     <Compile Include="FrmOgretmen.Designer.cs">
       <DependentUpon>FrmOgretmen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSinavNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSinavNotlar.Designer.cs">
+      <DependentUpon>FrmSinavNotlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Ogrenci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOgretmen.resx">
       <DependentUpon>FrmOgretmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSinavNotlar.resx">
+      <DependentUpon>FrmSinavNotlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Ogrenci.resx">
       <DependentUpon>Frm_Ogrenci.cs</DependentUpon>

@@ -49,7 +49,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rbuttonerkek = new System.Windows.Forms.RadioButton();
             this.rbuttonkız = new System.Windows.Forms.RadioButton();
-            this.cmbkulupid = new System.Windows.Forms.ComboBox();
+            this.cmbkulup = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtogrsoyad = new System.Windows.Forms.TextBox();
@@ -57,7 +57,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnara = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -106,6 +105,7 @@
             this.btnguncelle.TabIndex = 45;
             this.btnguncelle.Text = "GÜNCELLE";
             this.btnguncelle.UseVisualStyleBackColor = false;
+            this.btnguncelle.Click += new System.EventHandler(this.btnguncelle_Click);
             // 
             // btnekle
             // 
@@ -246,11 +246,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.rbuttonerkek);
             this.groupBox1.Controls.Add(this.rbuttonkız);
-            this.groupBox1.Controls.Add(this.cmbkulupid);
+            this.groupBox1.Controls.Add(this.cmbkulup);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtogrsoyad);
@@ -286,6 +285,7 @@
             this.rbuttonerkek.TabStop = true;
             this.rbuttonerkek.Text = "Erkek";
             this.rbuttonerkek.UseVisualStyleBackColor = true;
+            this.rbuttonerkek.CheckedChanged += new System.EventHandler(this.rbuttonerkek_CheckedChanged);
             // 
             // rbuttonkız
             // 
@@ -298,15 +298,16 @@
             this.rbuttonkız.TabStop = true;
             this.rbuttonkız.Text = "Kız";
             this.rbuttonkız.UseVisualStyleBackColor = true;
+            this.rbuttonkız.CheckedChanged += new System.EventHandler(this.rbuttonkız_CheckedChanged);
             // 
-            // cmbkulupid
+            // cmbkulup
             // 
-            this.cmbkulupid.FormattingEnabled = true;
-            this.cmbkulupid.Location = new System.Drawing.Point(126, 173);
-            this.cmbkulupid.Name = "cmbkulupid";
-            this.cmbkulupid.Size = new System.Drawing.Size(257, 33);
-            this.cmbkulupid.TabIndex = 42;
-            this.cmbkulupid.SelectedIndexChanged += new System.EventHandler(this.cmbkulupid_SelectedIndexChanged);
+            this.cmbkulup.FormattingEnabled = true;
+            this.cmbkulup.Location = new System.Drawing.Point(126, 173);
+            this.cmbkulup.Name = "cmbkulup";
+            this.cmbkulup.Size = new System.Drawing.Size(257, 33);
+            this.cmbkulup.TabIndex = 42;
+            this.cmbkulup.SelectedIndexChanged += new System.EventHandler(this.cmbkulupid_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -387,14 +388,6 @@
             this.textBox1.Size = new System.Drawing.Size(258, 30);
             this.textBox1.TabIndex = 47;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(105, 257);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 30);
-            this.textBox2.TabIndex = 46;
-            // 
             // Frm_Ogrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -453,7 +446,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rbuttonerkek;
         private System.Windows.Forms.RadioButton rbuttonkız;
-        private System.Windows.Forms.ComboBox cmbkulupid;
+        private System.Windows.Forms.ComboBox cmbkulup;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtogrsoyad;
@@ -461,6 +454,5 @@
         private System.Windows.Forms.Button btnara;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }
