@@ -14,15 +14,18 @@ namespace Bonus_Proje1
 {
     public partial class FrmKulup : Form
     {
+        private SqlBaglantisi bgl;
+
         public FrmKulup()
         {
             InitializeComponent();
+            bgl = new SqlBaglantisi();
+
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-KUCNJLV5\SQLEXPRESS;Initial Catalog=Okul;Integrated Security=True");
 
         void liste()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Kulupler", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Kulupler", bgl.baglan);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -41,12 +44,11 @@ namespace Bonus_Proje1
 
         private void btnekle_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into Tbl_Kulupler (Kulupad) values (@p1)", baglanti);
+            SqlCommand komut = new SqlCommand("insert into Tbl_Kulupler (Kulupad) values (@p1)", bgl.baglan);
             komut.Parameters.AddWithValue("@p1", txtkulupad.Text);
             komut.ExecuteNonQuery();
-            baglanti.Close();
             MessageBox.Show("Kulüp Listeye Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            bgl.baglan.Close();
             liste();
 
         }
@@ -74,23 +76,19 @@ namespace Bonus_Proje1
 
         private void btnsil_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Delete From Tbl_Kulupler where Kulupid=@p1", baglanti);
+            SqlCommand komut = new SqlCommand("Delete From Tbl_Kulupler where Kulupid=@p1", bgl.baglan);
             komut.Parameters.AddWithValue("@p", txtkulupid.Text);
             komut.ExecuteNonQuery();
-            baglanti.Close();
             MessageBox.Show("Kulüp Silme İşlemi Gerçekleştirildi");
             liste();
         }
 
         private void btnguncelle_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Update Tbl_Kulupler set Kulupad=@p1 where Kulupid=@p2", baglanti);
+            SqlCommand komut = new SqlCommand("Update Tbl_Kulupler set Kulupad=@p1 where Kulupid=@p2", bgl.baglan);
             komut.Parameters.AddWithValue("@p1", txtkulupad.Text);
             komut.Parameters.AddWithValue("@p2", txtkulupid.Text);
             komut.ExecuteNonQuery();
-            baglanti.Close();
             MessageBox.Show("Kulüp Güncelleme İşlemi Gerçekleştirildi");
             liste();
 

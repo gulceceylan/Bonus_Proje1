@@ -14,11 +14,13 @@ namespace Bonus_Proje1
 {
     public partial class FrmSinavNotlar : Form
     {
+        private SqlBaglantisi bgl;
         public FrmSinavNotlar()
         {
             InitializeComponent();
+            bgl = new SqlBaglantisi();
+
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-KUCNJLV5\SQLEXPRESS;Initial Catalog=Okul;Integrated Security=True");
 
         DataSet1TableAdapters.Tbl_NotlarTableAdapter ds = new DataSet1TableAdapters.Tbl_NotlarTableAdapter();
         private void btnara_Click(object sender, EventArgs e)
@@ -30,15 +32,15 @@ namespace Bonus_Proje1
 
         private void FrmSinavNotlar_Load(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Dersler", baglanti);
+            
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Dersler", bgl.baglan);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cmbders.DisplayMember = "Dersad";
             cmbders.ValueMember = "Dersid";
             cmbders.DataSource = dt;
-            baglanti.Close();
+            
         }
         int notid;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

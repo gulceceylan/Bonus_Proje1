@@ -13,30 +13,30 @@ namespace Bonus_Proje1
 {
     public partial class Frm_Ogrenci : Form
     {
+        private SqlBaglantisi bgl;
         public Frm_Ogrenci()
         {
             InitializeComponent();
+            bgl = new SqlBaglantisi();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-KUCNJLV5\SQLEXPRESS;Initial Catalog=Okul;Integrated Security=True");
 
         DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
         private void Frm_Ogrenci_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ds.Ogrenci_Listesi();
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Kulupler", baglanti);
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Kulupler", bgl.baglan);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cmbkulup.DisplayMember = "Kulupad";
             cmbkulup.ValueMember = "Kulupid";
             cmbkulup.DataSource = dt;
-            baglanti.Close();
+            
 
         }
         string c="";

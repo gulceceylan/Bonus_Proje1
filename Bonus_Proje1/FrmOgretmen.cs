@@ -14,11 +14,14 @@ namespace Bonus_Proje1
 {
     public partial class FrmOgretmen : Form
     {
+        private SqlBaglantisi bgl;
+
         public FrmOgretmen()
         {
             InitializeComponent();
+            bgl = new SqlBaglantisi();
+
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-KUCNJLV5\SQLEXPRESS;Initial Catalog=Okul;Integrated Security=True");
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -42,6 +45,11 @@ namespace Bonus_Proje1
         {
             FrmSinavNotlar fr = new FrmSinavNotlar();
             fr.Show();
+        }
+
+        private void FrmOgretmen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
